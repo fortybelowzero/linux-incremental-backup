@@ -14,6 +14,13 @@ This script utilizes TAR's ability to archive incremental changes. Run this scri
 
 ## Installation
 
+First, decide how you're going to copy the backup files offsite - eg create a new Dropbox account and mount it on the server as a folder, or similar with an Amazon S3 account.
+
+Edit the perform-backup.sh script to specify the folder you want to back up.
+
+You'll need to add this to the crontab. Here's an example for running at 1am each morning:
+0 1 * * * /usr/bin/bash /path/to/script/perform-backup.sh > /dev/null
+
 ## Configuration
 
 ## Further Notes
